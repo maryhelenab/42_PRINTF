@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:20:54 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/20 22:46:16 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/21 20:53:33 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,16 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end (args);
 	return (len);
+}
+
+int main(void)
+{
+	char c;
+	char *cu;
+
+	c = 't';
+	cu = "testando";
+	ft_printf("%s", cu);
+	printf("%s", cu);
+	return(0);
 }
