@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_base.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 18:31:06 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/25 18:49:54 by maryhelen        ###   ########.fr       */
+/*   Created: 2021/12/25 14:41:51 by maryhelen         #+#    #+#             */
+/*   Updated: 2021/12/25 17:38:20 by maryhelen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_base(long long int nbr, char *base)
+{
+	int	i;
 
-int		ft_printf(const char *format, ...);
-int		ft_check_arg(char c, va_list args);
-int		ft_putchar(char c, int i);
-int		ft_putstr(char *str);
-int		ft_pointer(unsigned long int nbr);
-int		ft_strlen(const char *s);
-int		ft_base(long long int nbr, char *base);
-
-#endif
+	i = 0;
+	if (nbr == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
+	else if (nbr < 0)
+	{
+		nbr *= -1;
+		write(1, "-", 1);
+		i++;
+	}
+	if (nbr >= (long long int)ft_strlen(base))
+		i += ft_base(nbr / ft_strlen(base), base);
+	i += write(1, &base[nbr % ft_strlen(base)], 1);
+	return (i);
+}

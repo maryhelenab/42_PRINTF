@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 18:31:06 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/25 18:49:54 by maryhelen        ###   ########.fr       */
+/*   Created: 2021/12/24 22:59:49 by maryhelen         #+#    #+#             */
+/*   Updated: 2021/12/25 17:45:10 by maryhelen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_pointer(unsigned long int nbr)
+{
+	char	*base;
 
-int		ft_printf(const char *format, ...);
-int		ft_check_arg(char c, va_list args);
-int		ft_putchar(char c, int i);
-int		ft_putstr(char *str);
-int		ft_pointer(unsigned long int nbr);
-int		ft_strlen(const char *s);
-int		ft_base(long long int nbr, char *base);
-
-#endif
+	base = "0123456789abcdef";
+	write(1, "0x", 2);
+	return (ft_base(nbr, base) + 2);
+}
