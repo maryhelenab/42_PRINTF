@@ -6,7 +6,7 @@
 /*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:20:54 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/25 18:29:46 by maryhelen        ###   ########.fr       */
+/*   Updated: 2021/12/25 19:02:13 by maryhelen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	/*char *p = "tester";
 	int Original = printf("%p, %%", p);
@@ -82,6 +82,5 @@ int	main(void)
 	printf("\n");
 	int Original = printf("%i, %%, %c, %s, %p, %d, %x, %X", i, c, str, str, j, i, j);
 	printf("\nOriginal: %i \nMeu: %i\n", Original, Meu);*/
-	
 	return (0);
 }
