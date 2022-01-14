@@ -6,7 +6,7 @@
 /*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:31:06 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/25 18:49:54 by maryhelen        ###   ########.fr       */
+/*   Updated: 2022/01/14 13:53:14 by maryhelen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 int		ft_printf(const char *format, ...);
 int		ft_check_arg(char c, va_list args);
 int		ft_putchar(char c, int i);
-int		ft_putstr(char *str);
-int		ft_pointer(unsigned long int nbr);
+int		ft_putstr(const void *str);
+int		ft_pointer(long long int nbr);
 int		ft_strlen(const char *s);
 int		ft_base(long long int nbr, char *base);
 
