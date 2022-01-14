@@ -6,7 +6,7 @@
 /*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:29:25 by malbuque          #+#    #+#             */
-/*   Updated: 2022/01/14 13:52:58 by maryhelen        ###   ########.fr       */
+/*   Updated: 2022/01/14 16:05:09 by maryhelen        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_check_arg(char c, va_list args)
 	else if (c == 's')
 		len += ft_putstr(va_arg(args, const void *));
 	else if (c == 'p')
-		len += ft_pointer(va_arg(args, long long int));
+		len += ft_pointer(va_arg(args, unsigned long int));
 	if (c == 'd' || c == 'i')
 		len += ft_base(va_arg(args, int), "0123456789");
 	else if (c == 'u')
