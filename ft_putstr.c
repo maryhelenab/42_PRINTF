@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maryhelen <maryhelen@student.42.fr>        +#+  +:+       +#+        */
+/*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 15:54:42 by maryhelen         #+#    #+#             */
-/*   Updated: 2022/01/05 21:14:12 by maryhelen        ###   ########.fr       */
+/*   Updated: 2022/03/05 13:29:33 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putstr(const void *str)
 	temp = (char *) str;
 	if (str == NULL)
 	{
-		write(1, "(null)",6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (temp[i])
